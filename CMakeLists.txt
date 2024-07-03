@@ -16,6 +16,8 @@ ament_auto_find_build_dependencies()
 # Declare executables
 ament_auto_add_executable(livox_to_pointcloud2_node src/livox_to_pointcloud2_node.cpp src/livox_to_pointcloud2.cpp)
 
+install(PROGRAMS scripts/static_transform_publisher.py DESTINATION lib/${PROJECT_NAME})
+
 # Install rules
 ament_auto_package(INSTALL_TO_SHARE
   launch
